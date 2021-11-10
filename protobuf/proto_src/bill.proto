@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package bill;
+option go_package = "proto_src/bill";
+
+message ApiRequestEvent
+{
+    uint32  app_id                = 1;      //app_id
+    string  request_id            = 2;      //请求ID
+    uint64  create_time           = 3;      //时间戳，毫秒
+    oneof test_oneof {
+        string name = 4;
+        uint32 id = 5;
+     }
+}
+
