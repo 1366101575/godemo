@@ -33,8 +33,9 @@ func TestCname(t *testing.T) {
 	})
 
 	//获取完整的解析记录, 或者是精确的第一层cname
-	t.Run("miekgDnsCname", func(t *testing.T) {
+	t.Run("allCname", func(t *testing.T) {
 		domain := "tieba.baidu.com"
+		domain = "publish-tencent1.zego.im"
 		cname, err := miekgDnsCname(domain, "114.114.114.114")
 		fmt.Println(err)
 		for _, c := range cname {
